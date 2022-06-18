@@ -1,16 +1,18 @@
 import 'dart:ffi';
 
-class login{
+class Login{
     bool?status ;
     String?message ;
-    Array?data ;
-    login({this.status,this.message,this.data});
+    String?user_id ;
+    String?level ;
+    Login({this.status,this.message,this.user_id,this.level});
 
-    factory login.fromJson(Map<String,dynamic> obj){
-        return login(
+    factory Login.fromJson(Map<String,dynamic> obj){
+        return Login(
             status: obj['status'],
             message: obj['message'],
-            data: obj['data'],
+            user_id: obj['data']['id_user'],
+            level: obj['data']['level'],
         );
     }
 }

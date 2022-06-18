@@ -40,7 +40,8 @@ class _MenuFormState extends State<MenuForm> {
             trailing: const Icon(Icons.coffee),
             onTap: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => MenuForm()));
+                  context, MaterialPageRoute(builder: (context) => MenuForm()))
+                ;
             },
           ),
           ListTile(
